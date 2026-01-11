@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-container {
+    width: 95%;
+    max-width: 400px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #d42020;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Экран старта */
+#start-screen {
+    margin-bottom: 20px;
+}
+
+#start-screen button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#start-screen button:hover {
+    background: #45a049;
+}
+
+/* Игровое поле */
+.board {
+    display: grid;
+    grid-template-columns: repeat(5, 60px);
+    grid-template-rows: repeat(5, 60px);
+    gap: 2px;
+    margin: 15px auto;
+    width: 310px;
+    height: 310px;
+    border: 3px solid #000;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.cell {
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    position: relative;
+    padding: 5px;
+}
+
+.corner {
+    background-color: gold;
+}
+
+.property {
+    background: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 100%);
+}
+
+.chance {
+    background: linear-gradient(45deg, #a1c4fd 0%, #c2e9fb 100%);
+}
+
+.tax {
+    background: linear-gradient(45deg, #ffecd2 0%, #fcb69f 100%);
+}
+
+/* Панель игрока */
+.player-panel {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 15px;
+    margin: 15px 0;
+    text-align: left;
+}
+
+.player-panel h2 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+/* Действия */
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.actions button {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#roll-dice {
+    background: #3498db;
+    color: white;
+}
+
+#end-turn {
+    background: #e74c3c;
+    color: white;
+}
+
+#buy-property {
+    background: #27ae60;
+    color: white;
+}
+
+#pay-rent {
+    background: #e67e22;
+    color: white;
+}
+
+/* Сообщения */
+#message {
+    min-height: 40px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #2c3e50;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Монополия</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Монополия</h1>
+
+        <!-- Экран создания/присоединения -->
+        <div id="start-screen">
+            <button id="create-game">Создать игру</button>
+            <button id="join-game">Присоединиться</button>
+        </div>
+
+        <!-- Игровое поле -->
+        <div class="board" id="board"></div>
+
+        <!-- Панель игрока -->
+        <div class="player-panel">
+            <h2>Ваш ход</h2>
+            <p>Игрок: <span id="current-player">—</span></p>
+            <p>Баланс: <span id="balance">0</span> $</p>
+            <p>Недвижимость: <span id="properties">0</span> улиц</p>
+        </div>
+
+        <!-- Действия -->
+        <div class="actions">
+            <button id="roll-dice" disabled>Бросить кубик</button>
+            <button id="end-turn" disabled>Завершить ход</button>
+            <button id="buy-property" style="display: none;">Купить улицу</button>
+            <button id="pay-rent" style="display: none;">Оплатить аренду</button>
+        </div>
+
+        <!-- Сообщения -->
+        <div id="message" class="message"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
